@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+    .links{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    a{
+        padding-top:50px;
+        padding-bottom:50px;
+        padding-right:30px;
+        color:black;
+
+    }
+    a:hover{
+        color:burlywood;
+    }
+    h1{
+        text-align: center;
+        padding-top:30px;
+    }
+
+</style>
+<h1>File Name: {{ filename }}</h1>
+<div class="links">
+<a style="text-decoration: none; color:back; font-size:20px;" href="{{ url_for('upload') }}">New Upload</a>
+<br>
+<a style="text-decoration: none; color:back; font-size:20px;" href="{{ url_for('gallery') }}">Gallery</a>
+</div>
+{% endblock content %}

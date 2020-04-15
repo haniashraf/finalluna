@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+.form{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-top:50px;
+   padding-bottom: 50px;
+}
+
+</style>
+<div class="form">
+    <form method="POST"  enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        {{ form.image }}
+        <button type="submit">Upload</button>
+    </form>
+    </div>
+{% endblock content%}

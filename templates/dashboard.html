@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+  .box{
+    display: flex;
+    flex-direction:row;
+    
+    justify-content: center;
+  }
+  a{
+    text-align: center;
+    margin-right:20px;
+    margin-bottom: 40px;
+  }
+
+  @media(max-width: 375px){
+    .box{
+      display: flex;
+      
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+</style>
+<div class="box">
+<a href="{{ url_for('upload') }}" class="btn" id="view-work">Upload</a>
+						<br>
+						<a href="{{ url_for('signup') }}" class="btn" id="view-work">Add User</a>
+						<br>
+            <a href="{{ url_for('logout') }}" class="btn" id="view-work">Logout</a>
+            </div>
+{% endblock content %}
